@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример 25</title>
+</head>
+<body>
+  <script>
+   let x = prompt('Введите число x: ').replace(/\s+/g, '');
+   while (isNaN(+x) || x.length > 10|| x.length == 0) {
+      alert('Неверный формат введенного значения.\nВы ввели либо слишком длинное число, либо это не число.\nДавайте попробуем еще раз!')
+      x = prompt('Введите число x', '').replace(/\s+/g, '');
+    }
+
+   let y = prompt('Введите число y: ').replace(/\s+/g, '');
+   while (isNaN(+y) || y.length > 10 || y.length == 0) {
+      alert('Неверный формат введенного значения.\nВы ввели либо слишком длинное число, либо это не число.\nДавайте попробуем еще раз!')
+      y = prompt('Введите число y', '').replace(/\s+/g, '');
+   }
+
+   let z = Math.pow(x, y);
+   
+   if(z == NaN || !isFinite(z))
+   alert(`Число ${x}  в степени ${y} невозможно вычислить `);
+   else alert(`Число ${x}  в степени ${y} равно ${z}`);
+   
+      
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Самостоятельная 1</title>
+</head>
+<body>
+  <script>
+  let n = prompt('Введите число до 12: ').replace(/\s+/g, '');
+    while (!Number.isInteger(+n) || +n > 12 || n.length == 0 || +n <= 0) {
+      alert('Неверный формат введенного значения.\nДавайте попробуем еще раз!')
+      n = prompt('Введите число до 12:', '').replace(/\s+/g, '');
+    }
+  switch (+n) {
+    case 1: case 2: case 12:
+      alert(`Вы ввели месяц ${n} это Зима`)
+      break;
+    case 3: case 4: case 5:
+      alert(`Вы ввели месяц ${n} это Весна`)
+      break;
+    case 6: case 7: case 8:
+      alert(`Вы ввели месяц ${n} это Лето`)
+      break;
+
+    default:
+      alert(`Вы ввели месяц ${n} это Осень`)
+      break;
+  }
+</script>
+</body>
+</html>

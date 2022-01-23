@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Самостоятельная 2</title>
+</head>
+<body>
+  <script>
+  let color = prompt('Введите цвет гриба, который вы нашли:\nДоступные цвета: белый, жёлтый, красный, коричневый.').replace(/\s+/g, '').toLowerCase();
+    while (color != "белый" && color != "желтый" && color != "жёлтый" && color != "красный" && color != "коричневый" ) {
+      alert('Неверный цвет.\nДавайте попробуем еще раз!')
+      color = prompt('Введите цвет гриба, который вы нашли:\nДоступные цвета: белый, жёлтый, красный, коричневый.').replace(/\s+/g, '').toLowerCase();
+    }
+  let skirt = prompt('Есть ли у гриба юбка:\nДоступные варианты: есть, нет.').replace(/\s+/g, '').toLowerCase();
+    while (skirt != "есть" && skirt != "нет") {
+      alert('Неверный вариант.\nДавайте попробуем еще раз!')
+      skirt = prompt('Есть ли у гриба юбка:\nДоступные варианты: есть, нет.').replace(/\s+/g, '').toLowerCase();
+    }
+  switch (color + skirt) {
+    case 'белыйнет': 
+      alert(`Вы нашли белый гриб`);
+      break;
+    case 'красныйесть':
+      alert(`А не мухомор ли это`);
+      break;
+    case 'красныйнет':
+      alert(`Может это подосиновик`);
+      break;
+
+    default:
+      alert(`С грибами надо быть внимательным`);
+      break;
+  }
+</script>
+</body>
+</html>

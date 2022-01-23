@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример 26</title>
+</head>
+<body>
+  <script>
+   let n = prompt('Введите число n: ').replace(/\s+/g, '');
+   while (!Number.isInteger(+n) || n > 170|| n.length == 0 || +n < 0) {
+      alert('Неверный формат введенного значения.\nВы ввели либо слишком большое число, либо отрицательное число, либо это не число.\nДавайте попробуем еще раз!')
+      n = prompt('Введите число миньше 170.\nn:', '').replace(/\s+/g, '');
+    }
+   let z = 1; 
+   if(n > 1) {
+     let i = 2;
+     do {
+       z = z * i;
+       i ++;
+     }
+     while (i <= +n);
+   }
+   alert(`Факториал числа ${n} равен ${z}`);
+  </script>
+</body>
+</html>
